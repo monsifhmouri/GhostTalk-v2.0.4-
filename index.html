@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang=ar dir=ltr>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>GhostTalk - Offline P2P Messenger</title>
+<meta name=description content="GhostTalk is a military-grade, offline peer-to-peer messenger for Android. Works without internet using Bluetooth and Wi-Fi Direct.">
+<link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+<link rel=stylesheet href=style.css>
+<style>.translation-controls{position:fixed;top:20px;right:20px;z-index:9999;display:flex;gap:10px;background:rgba(13,17,23,.9);padding:10px;border-radius:50px;border:1px solid #00bfff;backdrop-filter:blur(5px)}.lang-btn{background:0 0;border:1px solid #2d3748;color:#8b949e;padding:8px 16px;border-radius:30px;cursor:pointer;font-family:'Fira Code',monospace;font-size:14px;transition:all .3s ease}.lang-btn.active{background:#00bfff;color:#0d1117;border-color:#00bfff;box-shadow:0 0 15px #00bfff}.lang-btn:hover{border-color:#00bfff;color:#00bfff}.lang-btn.active:hover{color:#0d1117}.professional-description{background:linear-gradient(145deg,#0a0e15 0,#141c28 100%);border-radius:30px;padding:60px 40px;margin:40px 0;border:1px solid #2d3748;position:relative;overflow:hidden}.professional-description::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#00bfff,#00ff7f,#00bfff,transparent);animation:scan 3s linear infinite}@keyframes scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}.desc-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center}.desc-title{font-size:2rem;margin-bottom:25px;display:flex;align-items:center;gap:10px}.desc-title i{color:#00ff7f}.desc-text{color:#8b949e;margin-bottom:25px;line-height:1.8;font-size:1.1rem}.tech-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}.tech-item{background:rgba(0,191,255,.05);border:1px solid #2d3748;border-radius:15px;padding:20px;text-align:center;transition:all .3s ease}.tech-item:hover{border-color:#00ff7f;transform:translateY(-5px)}.tech-item i{font-size:2rem;color:#00bfff;margin-bottom:10px}.tech-item span{display:block;font-family:'Fira Code',monospace;color:#e6f1ff;font-size:1.2rem;margin-bottom:5px}.tech-item small{color:#8b949e;font-size:.85rem}.desc-stats{display:flex;gap:30px;justify-content:center}.stat-item{text-align:center}.stat-number{font-size:2.5rem;font-family:'Fira Code',monospace;color:#00ff7f;font-weight:600}.stat-label{color:#8b949e;font-size:.9rem}.desc-image img{width:100%;max-width:300px;border-radius:20px;border:2px solid #00bfff;box-shadow:0 20px 40px rgba(0,191,255,.2)}@media (max-width:768px){.desc-grid{grid-template-columns:1fr;text-align:center}.tech-specs{grid-template-columns:1fr}.desc-stats{flex-wrap:wrap}.translation-controls{top:10px;right:10px}}</style>
+</head>
+<body>
+<div class=translation-controls>
+<button class="lang-btn active" onclick='switchLanguage("ar")' id=langAr>🇸🇦 AR</button>
+<button class=lang-btn onclick='switchLanguage("en")' id=langEn>🇬🇧 EN</button>
+</div>
+<section class=hero>
+<div class=container>
+<div class=hero-content>
+<h1 class=ar-content>GhostTalk: <span class=blue-text>تواصل عندما لا يستطيع أحد</span></h1>
+<h1 class=en-content style=display:none>GhostTalk: <span class=blue-text>Communicate When Nothing Else Can</span></h1>
+<p class="subhead ar-content">ماسنجر لامركزي بمعايير عسكرية يعمل بدون إنترنت. خصوصيتك، شبكتك.</p>
+<p class="subhead en-content" style=display:none>A decentralized, military-grade P2P messenger that works entirely offline. Your privacy, your network.</p>
+<div class=download-options>
+<a href=https://mega.nz/file/j9RmBISB#aWGcJ1hCf0CxDwCoaFEvLUyDBHl_66stQ1ycCHXzlW4 class="btn primary-btn" target=_blank rel="noopener noreferrer">
+<i class="fas fa-download"></i> <span class=ar-content>تحميل APK (v2.0.4)</span>
+<span class=en-content style=display:none>Download APK (v2.0.4)</span>
+</a>
+<button class="btn qr-btn" onclick=openQRModal()>
+<i class="fas fa-qrcode"></i> <span class=ar-content>مسح QR للتحميل</span>
+<span class=en-content style=display:none>Scan QR to Download</span>
+</button>
+</div>
+<div class="security-badge ar-content">
+<i class="fas fa-shield-alt"></i> مشفر بـ AES-256 | بدون سيرفرات | لا يحتاج إنترنت
+</div>
+<div class="security-badge en-content" style=display:none>
+<i class="fas fa-shield-alt"></i> AES-256 Encrypted | No Servers | No Internet Needed
+</div>
+</div>
+<div class=hero-image>
+<img src=images/discovery-screen.jpg alt="GhostTalk discovery screen" onerror='this.src="https://placehold.co/400x800/0D1117/00BFFF?text=Discovery+Screen"'>
+</div>
+</div>
+</section>
+<section class=professional-description>
+<div class=container>
+<div class=desc-grid>
+<div class=desc-content>
+<div class="desc-title ar-content">
+<i class="fas fa-crown"></i> أكثر من مجرد تطبيق
+</div>
+<div class="desc-title en-content" style=display:none>
+<i class="fas fa-crown"></i> More Than Just an App
+</div>
+<div class="desc-text ar-content">
+GhostTalk هو الجيل القادم من التواصل اللامركزي. صمم خصيصاً للبيئات القاسية والمواقف الحرجة حيث تفشل شبكات الاتصال التقليدية. يعتمد على تقنيات تشفير عسكرية وبروتوكولات P2P متطورة لضمان اتصال آمن وموثوق في أي زمان ومكان.
+</div>
+<div class="desc-text en-content" style=display:none>
+GhostTalk is the next generation of decentralized communication. Specifically designed for harsh environments and critical situations where traditional networks fail. It relies on military-grade encryption and advanced P2P protocols to ensure secure and reliable communication anytime, anywhere.
+</div>
+<div class=tech-specs>
+<div class=tech-item>
+<i class="fas fa-bolt"></i>
+<span class=ar-content>سرعة قصوى</span>
+<span class=en-content style=display:none>Maximum Speed</span>
+<small class=ar-content>اتصال فوري بدون تأخير</small>
+<small class=en-content style=display:none>Instant connection</small>
+</div>
+<div class=tech-item>
+<i class="fas fa-shield-haltered"></i>
+<span class=ar-content>حماية عسكرية</span>
+<span class=en-content style=display:none>Military Grade</span>
+<small class=ar-content>AES-256 + تشفير ثنائي</small>
+<small class=en-content style=display:none>AES-256 + dual encryption</small>
+</div>
+<div class=tech-item>
+<i class="fas fa-battery-three-quarters"></i>
+<span class=ar-content>موفر للطاقة</span>
+<span class=en-content style=display:none>Power Efficient</span>
+<small class=ar-content>استهلاك منخفض للبطارية</small>
+<small class=en-content style=display:none>Low battery consumption</small>
+</div>
+<div class=tech-item>
+<i class="fas fa-globe"></i>
+<span class=ar-content>مدى غير محدود</span>
+<span class=en-content style=display:none>Unlimited Range</span>
+<small class=ar-content>شبكة متداخلة ذاتية التوسع</small>
+<small class=en-content style=display:none>Self-expanding mesh network</small>
+</div>
+</div>
+<div class=desc-stats>
+<div class=stat-item>
+<div class=stat-number>100%</div>
+<div class="stat-label ar-content">خصوصية</div>
+<div class="stat-label en-content" style=display:none>Privacy</div>
+</div>
+<div class=stat-item>
+<div class=stat-number>0</div>
+<div class="stat-label ar-content">سيرفرات وسيطة</div>
+<div class="stat-label en-content" style=display:none>Middle Servers</div>
+</div>
+<div class=stat-item>
+<div class=stat-number>∞</div>
+<div class="stat-label ar-content">مدى تواصل</div>
+<div class="stat-label en-content" style=display:none>Communication Range</div>
+</div>
+</div>
+</div>
+<div class="desc-image ar-content">
+<img src=images/about-dialog.jpg alt="GhostTalk features" onerror='this.src="https://placehold.co/300x600/0D1117/00FF7F?text=Secure+Chat"'>
+</div>
+<div class="desc-image en-content" style=display:none>
+<img src=images/about-dialog.jpg alt="GhostTalk features" onerror='this.src="https://placehold.co/300x600/0D1117/00FF7F?text=Secure+Chat"'>
+</div>
+</div>
+</div>
+</section>
+<section class=features>
+<div class=container>
+<h2 class=section-title><span class=blue-text>//</span> <span class=ar-content>المميزات الأساسية</span><span class=en-content style=display:none>Core Features</span></h2>
+<div class=features-grid>
+<div class=feature-card>
+<i class="fas fa-wifi feature-icon"></i>
+<h3 class=ar-content>بدون إنترنت تماماً</h3>
+<h3 class=en-content style=display:none>Truly Offline</h3>
+<p class=ar-content>لا يحتاج شبكة ولا بيانات. يعمل عبر Bluetooth و Wi-Fi Direct بشكل كامل بدون إنترنت.</p>
+<p class=en-content style=display:none>No internet, no cell service required. Works via Bluetooth & Wi-Fi Direct.</p>
+</div>
+<div class=feature-card>
+<i class="fas fa-lock feature-icon"></i>
+<h3 class=ar-content>أمان عسكري</h3>
+<h3 class=en-content style=display:none>Ironclad Security</h3>
+<p class=ar-content>تشفير AES-256 من الطرف للطرف. رسائلك خاصة بك وحدك. بدون خوادم مركزية.</p>
+<p class=en-content style=display:none>End-to-end AES-256 encryption. No central servers, no data leaks.</p>
+</div>
+<div class=feature-card>
+<i class="fas fa-project-diagram feature-icon"></i>
+<h3 class=ar-content>شبكة لامركزية</h3>
+<h3 class=en-content style=display:none>Fully Decentralized</h3>
+<p class=ar-content>الرسائل تتنقل بين الأجهزة لتوسيع المدى. أنت نفسك الشبكة.</p>
+<p class=en-content style=display:none>Messages hop between devices. You are the network.</p>
+</div>
+<div class=feature-card>
+<i class="fas fa-user-secret feature-icon"></i>
+<h3 class=ar-content>خصوصية كاملة</h3>
+<h3 class=en-content style=display:none>Complete Anonymity</h3>
+<p class=ar-content>لا يحتاج رقم هاتف ولا تسجيل. هويتك غير مخزنة. فقط مسح ضوئي وتواصل.</p>
+<p class=en-content style=display:none>No phone numbers, no sign-ups. Just scan and connect.</p>
+</div>
+</div>
+</div>
+</section>
+<div id=qrModal class=modal>
+<div class=modal-content>
+<span class=close-btn onclick=closeQRModal()>&times;</span>
+<h3><i class="fas fa-qrcode green-text"></i> <span class=ar-content>مسح QR للتحميل المباشر</span><span class=en-content style=display:none>Scan QR to Download</span></h3>
+<div class=qr-container>
+<img src=qrcodes/download-qr.png alt="QR Code for GhostTalk APK" onerror='this.src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://mega.nz/file/j9RmBISB%23aWGcJ1hCf0CxDwCoaFEvLUyDBHl_66stQ1ycCHXzlW4"'>
+</div>
+<p class="qr-note ar-content">استخدم كاميرا هاتفك لمسح الرمز والتحميل مباشرة</p>
+<p class="qr-note en-content" style=display:none>Use your phone camera to scan and download directly</p>
+<a href=https://mega.nz/file/j9RmBISB#aWGcJ1hCf0CxDwCoaFEvLUyDBHl_66stQ1ycCHXzlW4 class="btn small-btn" target=_blank rel="noopener noreferrer">
+<i class="fas fa-external-link-alt"></i> <span class=ar-content>رابط التحميل المباشر</span>
+<span class=en-content style=display:none>Direct Download Link</span>
+</a>
+</div>
+</div>
+<section class=use-cases>
+<div class=container>
+<h2 class=section-title><span class=green-text>//</span> <span class=ar-content>في أي حالة تحتاجه</span><span class=en-content style=display:none>Use Cases</span></h2>
+<div class=use-grid>
+<div class=use-card>
+<i class="fas fa-mountain use-icon"></i>
+<h3 class=ar-content>رحلات وتخييم</h3>
+<h3 class=en-content style=display:none>Remote Adventures</h3>
+<p class=ar-content>تواصل مع مجموعتك في الجبال والأماكن النائية بدون تغطية</p>
+<p class=en-content style=display:none>Stay connected while hiking, camping, or exploring off-grid</p>
+</div>
+<div class=use-card>
+<i class="fas fa-music use-icon"></i>
+<h3 class=ar-content>أماكن مزدحمة</h3>
+<h3 class=en-content style=display:none>Crowded Events</h3>
+<p class=ar-content>في المهرجانات والملاعب حيث الشبكة مشبعة ولا تعمل</p>
+<p class=en-content style=display:none>At festivals, stadiums where networks are congested</p>
+</div>
+<div class=use-card>
+<i class="fas fa-exclamation-triangle use-icon"></i>
+<h3 class=ar-content>حالات طارئة</h3>
+<h3 class=en-content style=display:none>Emergencies</h3>
+<p class=ar-content>أثناء الكوارث الطبيعية وانقطاع الشبكات التقليدية</p>
+<p class=en-content style=display:none>During natural disasters and network outages</p>
+</div>
+</div>
+</div>
+</section>
+<section class=gallery>
+<div class=container>
+<h2 class=section-title><span class=blue-text>//</span> <span class=ar-content>معاينة التطبيق</span><span class=en-content style=display:none>App Preview</span></h2>
+<div class=gallery-grid>
+<div class=gallery-item>
+<img src=images/chat-screen.jpg alt="Chat screen" onerror='this.src="https://placehold.co/600x1200/0D1117/00BFFF?text=Chat+Screen"'>
+</div>
+<div class=gallery-item>
+<img src=images/about-dialog.jpg alt="About dialog" onerror='this.src="https://placehold.co/600x1200/0D1117/00FF7F?text=About"'>
+</div>
+<div class=gallery-item>
+<img src=images/peers-screen.jpg alt="Peers screen" onerror='this.src="https://placehold.co/600x1200/0D1117/00BFFF?text=Peers"'>
+</div>
+</div>
+</div>
+</section>
+<section class=final-cta>
+<div class=container>
+<h2><span class=ar-content>استعد خصوصيتك. <span class=green-text>حمّل GhostTalk اليوم</span></span>
+<span class=en-content style=display:none>Reclaim Your Privacy. <span class=green-text>Download GhostTalk Today</span></span></h2>
+<div class=cta-buttons>
+<a href=https://mega.nz/file/j9RmBISB#aWGcJ1hCf0CxDwCoaFEvLUyDBHl_66stQ1ycCHXzlW4 class="btn primary-btn large" target=_blank rel="noopener noreferrer">
+<i class="fas fa-download"></i> <span class=ar-content>تحميل APK (v2.0.4)</span>
+<span class=en-content style=display:none>Download APK (v2.0.4)</span>
+</a>
+<button class="btn secondary-btn" onclick=openQRModal()>
+<i class="fas fa-qrcode"></i> <span class=ar-content>QR للتحميل</span>
+<span class=en-content style=display:none>Download QR</span>
+</button>
+</div>
+</div>
+</section>
+<footer>
+<div class=container>
+<div class=footer-content>
+<div class=copyright>
+Created by MONSIF HMOURI © 2026 GhostTalk
+</div>
+<div class=social-links>
+<a href=https://github.com/monsifhmouri target=_blank rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+<a href=https://www.linkedin.com/in/monsifhmouri/ target=_blank rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+<a href=https://www.instagram.com/httpx.mrmonsif/ target=_blank rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+<a href=https://www.facebook.com/https.monsifhmouri target=_blank rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+<a href=https://bugcrowd.com/h/MONSTR-M1ND target=_blank rel="noopener noreferrer"><i class="fas fa-bug"></i></a>
+</div>
+</div>
+</div>
+</footer>
+<script>function openQRModal(){document.getElementById("qrModal").style.display="flex"}function closeQRModal(){document.getElementById("qrModal").style.display="none"}function switchLanguage(e){document.getElementById("langAr").classList.remove("active"),document.getElementById("langEn").classList.remove("active"),"ar"===e?(document.getElementById("langAr").classList.add("active"),document.querySelectorAll(".ar-content").forEach((e=>e.style.display="")),document.querySelectorAll(".en-content").forEach((e=>e.style.display="none")),document.documentElement.lang="ar",document.documentElement.dir="ltr"):(document.getElementById("langEn").classList.add("active"),document.querySelectorAll(".ar-content").forEach((e=>e.style.display="none")),document.querySelectorAll(".en-content").forEach((e=>e.style.display="")),document.documentElement.lang="en",document.documentElement.dir="ltr")}window.onclick=function(e){var t=document.getElementById("qrModal");e.target==t&&(t.style.display="none")}</script>
+</body>
+</html>
